@@ -1,0 +1,144 @@
+@use '../abstracts/variables' as *;
+
+.chat-list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 1rem;
+
+  min-height: 500px;
+  padding: 1rem;
+  border: 1px solid $color-text-highlight;
+  border-radius: 0.5rem;
+
+  color: $color-text;
+
+  background-color: $color-primary;
+
+  transition: all 0.3s ease-in-out;
+
+  &__user-info {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+
+    padding: 1rem;
+    border-bottom: 1px solid $color-text-highlight;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__username {
+    overflow: hidden;
+
+    font-size: $font-size-large;
+    color: $color-text;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__user-status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+
+    font-size: $font-size-small;
+
+    background-color: $color-background;
+
+    transition: all 0.3s ease-in-out;
+
+    &--online {
+      color: $color-success;
+    }
+
+    &--offline {
+      color: $color-error;
+    }
+  }
+
+  &__container {
+    scrollbar-width: none;
+
+    overflow-y: scroll;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__list {
+    scrollbar-width: none;
+
+    overflow-y: scroll;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    padding: 1rem 0;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+
+    background-color: $input-background;
+
+    transition: all 0.3s ease-in-out;
+
+    & > :first-child {
+      margin-top: auto;
+    }
+  }
+
+  &__empty {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+
+    padding: 2rem;
+
+    text-align: center;
+
+    transition: all 0.3s ease-in-out;
+
+    &-message {
+      font-size: 1rem;
+      color: $color-text-light;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    gap: 1rem;
+  }
+
+  &__input {
+    color: $color-text;
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__divider {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  &__divider-line {
+    flex: 1;
+    height: 1px;
+    background-color: $color-text-highlight;
+  }
+
+  &__divider-text {
+    margin: 0 1rem;
+    font-size: $font-size-xs;
+    color: $color-text;
+    white-space: nowrap;
+  }
+
+  @media (width <= 768px) {
+    width: 100%;
+  }
+}

@@ -1,0 +1,111 @@
+@use '../abstracts/variables' as *;
+
+.chat-item {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    padding: 0.5rem;
+    border: 1px solid $color-night;
+    border-radius: 0.5rem;
+
+    background-color: $color-bright;
+
+    transition: all 0.3s ease-in-out;
+
+    &--own {
+      background-color: $color-night;
+    }
+  }
+
+  &__header {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+
+    font-size: $font-size-small;
+    color: $color-text-highlight;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__sender {
+    overflow: hidden;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__time {
+    flex-shrink: 0;
+    font-size: $font-size-xs;
+  }
+
+  &__content {
+    display: flex;
+    gap: 1rem;
+
+    padding: 0.5rem 0;
+    border-radius: 0.5rem;
+
+    font-size: $font-size-base;
+    color: $color-text;
+    word-break: break-word;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__footer {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: space-between;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__status-container {
+    display: flex;
+  }
+
+  &__status-not-delivered,
+  &__status-delivered,
+  &__status-read {
+    font-size: $font-size-xs;
+    font-weight: 300;
+    font-style: italic;
+    color: $color-text-light;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__buttons-container {
+    display: flex;
+    gap: 0.5rem;
+  }
+
+  &__text {
+    flex: 1;
+  }
+
+  &__edited {
+    font-size: $font-size-xs;
+    font-weight: 300;
+    font-style: italic;
+    color: $color-text-highlight;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__edit-form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+}

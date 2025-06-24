@@ -1,0 +1,104 @@
+@use '../abstracts/variables' as *;
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  cursor: pointer;
+
+  padding: 0.75rem 1.5rem;
+  border: 1px solid $color-text;
+  border-radius: 0.5rem;
+
+  font-size: $font-size-base;
+  color: $color-text;
+
+  background-color: transparent;
+
+  transition: all 0.3s ease-in-out;
+
+  &--login {
+    padding: 0.25rem 0.5rem;
+    font-size: $font-size-small;
+
+    &:hover {
+      border-color: $color-text-highlight;
+      color: $color-text-highlight;
+    }
+  }
+
+  &--logout {
+    padding: 0.25rem 0.5rem;
+    font-size: $font-size-small;
+
+    &:hover {
+      border-color: $color-text-highlight;
+      color: $color-text-highlight;
+    }
+  }
+
+  &--homepage {
+    &:hover {
+      border-color: $color-error;
+      color: $color-error;
+    }
+  }
+
+  &--signin {
+    &:hover {
+      border-color: $color-text-highlight;
+      color: $color-text-highlight;
+    }
+  }
+
+  &--send {
+    border-color: $color-text-highlight;
+    color: $color-text-highlight;
+
+    &:hover {
+      border-color: $color-attention;
+      color: $color-attention;
+    }
+  }
+
+  &--edit,
+  &--delete {
+    padding: 0.25rem;
+    border: none;
+
+    font-size: $font-size-xs;
+    color: $color-text-light;
+
+    background-color: transparent;
+
+    &:hover {
+      color: $color-text-highlight;
+    }
+  }
+
+  &--confirm,
+  &--cancel {
+    padding: 0.25rem;
+    border: none;
+
+    font-size: $font-size-2xl;
+    color: $color-text;
+
+    background-color: transparent;
+  }
+
+  &--confirm {
+    &:hover {
+      color: $color-success;
+    }
+  }
+
+  &--cancel {
+    &:hover {
+      color: $color-error;
+    }
+  }
+}

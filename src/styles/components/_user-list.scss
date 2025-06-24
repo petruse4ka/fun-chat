@@ -1,0 +1,135 @@
+@use '../abstracts/variables' as *;
+
+.user-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 30%;
+  min-height: 500px;
+  border: 1px solid $color-text-highlight;
+  border-radius: 0.5rem;
+
+  background-color: $color-primary;
+
+  transition: all 0.3s ease-in-out;
+
+  &__input {
+    width: 90%;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: $color-text-highlight;
+  }
+
+  &__list {
+    scrollbar-width: none;
+
+    overflow-y: scroll;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 90%;
+    margin-bottom: 1.5rem;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__no-other-users {
+    margin: auto;
+
+    font-size: $font-size-base;
+    color: $color-text-highlight;
+    text-align: center;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__user {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.25rem;
+
+    background-color: $color-background;
+
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: $color-night;
+    }
+
+    &--selected {
+      border-color: $color-bright;
+      background-color: $color-bright;
+
+      &:hover {
+        border-color: $color-bright;
+        background-color: $color-bright;
+      }
+    }
+  }
+
+  &__username {
+    overflow: hidden;
+    flex: 1;
+
+    font-size: $font-size-base;
+    color: $color-text;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__unread-messages {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.5rem;
+    border-radius: 50%;
+
+    font-size: $font-size-xs;
+
+    background-color: $color-attention;
+
+    transition: all 0.3s ease-in-out;
+
+    &--hide {
+      display: none;
+    }
+  }
+
+  &__status {
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+
+    transition: all 0.3s ease-in-out;
+
+    &--online {
+      background-color: $color-success;
+    }
+
+    &--offline {
+      background-color: $color-error;
+    }
+  }
+
+  @media (width <= 768px) {
+    width: 100%;
+    min-height: 250px;
+    max-height: 300px;
+  }
+}

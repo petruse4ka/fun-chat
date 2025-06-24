@@ -1,0 +1,116 @@
+@use '../abstracts/variables' as *;
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+
+  width: 100%;
+  max-width: 500px;
+  margin: 2rem;
+  padding: 2rem 1.5rem;
+  border: 1px solid $color-text-highlight;
+  border-radius: 1rem;
+
+  background: $color-night;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  &__field-container {
+    display: flex;
+    gap: 0.3rem;
+    width: 100%;
+  }
+
+  &__label {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+
+    margin-bottom: 0.25rem;
+
+    font-size: $font-size-base;
+    color: $color-text-highlight;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__tooltip-icon {
+    cursor: default;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 1px solid $color-text-light;
+    border-radius: 50%;
+
+    font-size: $font-size-2xs;
+    color: $color-text-light;
+
+    &:hover {
+      border-color: $color-attention;
+      color: $color-attention;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    z-index: 10;
+    top: 1.5em;
+
+    display: none;
+
+    min-width: 320px;
+    max-width: 320px;
+    padding: 1em;
+    border: 1px solid $color-attention;
+    border-radius: 0.5em;
+
+    font-size: $font-size-small;
+    color: $color-text;
+
+    background: $color-background;
+  }
+
+  &__error {
+    cursor: default;
+
+    margin-top: 0.25rem;
+
+    font-size: $font-size-small;
+    color: $color-error;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: all 0.3s ease-in-out;
+
+    &--visible {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &--visible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  @media (width <= 768px) {
+    &__tooltip {
+      min-width: 200px;
+      max-width: 200px;
+    }
+  }
+}
