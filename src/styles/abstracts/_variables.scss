@@ -1,0 +1,78 @@
+// Default theme colors
+:root {
+  --color-primary: #5a6d8a;
+  --color-secondary: #feb236;
+  --color-success: #58b368;
+  --color-attention: #e2a32d;
+  --color-error: #ff6b6b;
+  --color-bright: #8c5dbb;
+  --color-smooth: #0aa188;
+  --color-night: #495e7e;
+  --color-background: #1a1a2e;
+  --input-background: #242438;
+  --color-background-light: #fff;
+  --color-text: #e6e6e6;
+  --color-text-light: #9494a6;
+  --color-text-highlight: #12e4b3;
+  --color-border: #e2dede;
+  --input-border: #2d2d44;
+  --input-border-highlight: #77b1a3;
+}
+
+// Light theme colors
+body.body--light-theme {
+  --color-primary: #ebdde8;
+  --color-secondary: #350132;
+  --color-success: #58b368;
+  --color-attention: #e2a32d;
+  --color-error: #ff6b6b;
+  --color-bright: #d4a4f0;
+  --color-smooth: #c29de2;
+  --color-night: #c9e0e6;
+  --color-background: #f4f6f7;
+  --input-background: #fff;
+  --color-background-light: #fff;
+  --color-text: #2b2b2c;
+  --color-text-light: #6b6b6b;
+  --color-text-highlight: #85037e;
+  --color-border: #000;
+  --input-border: #ccc;
+  --input-border-highlight: #77b1a3;
+}
+
+$color-primary: var(--color-primary);
+$color-secondary: var(--color-secondary);
+$color-success: var(--color-success);
+$color-attention: var(--color-attention);
+$color-error: var(--color-error);
+$color-bright: var(--color-bright);
+$color-smooth: var(--color-smooth);
+$color-night: var(--color-night);
+$color-background: var(--color-background);
+$input-background: var(--input-background);
+$color-background-light: var(--color-background-light);
+$color-text: var(--color-text);
+$color-text-light: var(--color-text-light);
+$color-text-highlight: var(--color-text-highlight);
+$color-border: var(--color-border);
+$input-border: var(--input-border);
+$input-border-highlight: var(--input-border-highlight);
+
+// Typography
+$font-size-2xs: 0.5rem;
+$font-size-xs: 0.75rem;
+$font-size-small: 0.875rem;
+$font-size-base: 1rem;
+$font-size-large: 1.125rem;
+$font-size-xl: 1.25rem;
+$font-size-2xl: 1.5rem;
+$font-size-3xl: 1.875rem;
+
+// Font families
+$font-family-base: 'Roboto', sans-serif;
+$font-family-heading: 'Roboto', sans-serif;
+
+// Line heights
+$line-height-small: 1.25;
+$line-height-base: 1.5;
+$line-height-big: 1.75;

@@ -1,0 +1,47 @@
+@use '../abstracts/variables' as *;
+
+.error {
+  display: flex;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: center;
+
+  padding: 2rem;
+
+  background-color: $color-background;
+
+  transition: all 0.3s ease-in-out;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    max-width: 800px;
+  }
+
+  &__heading {
+    margin-bottom: 1rem;
+
+    font-size: $font-size-3xl;
+    color: $color-text;
+    text-align: center;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  &__message {
+    margin-bottom: 2rem;
+    font-size: $font-size-large;
+    color: $color-text;
+    text-align: center;
+  }
+}

@@ -1,0 +1,81 @@
+@use '../abstracts/variables' as *;
+
+.footer {
+  display: flex;
+  justify-content: center;
+
+  color: $color-text-highlight;
+
+  background-color: $color-primary;
+
+  transition: all 0.3s ease-in-out;
+
+  &__container {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1280px;
+    padding: 1rem 2rem;
+  }
+
+  &__copyright {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+
+    font-size: $font-size-small;
+    text-align: center;
+
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__school-info {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+
+    font-size: $font-size-small;
+    text-align: center;
+  }
+
+  &__link {
+    display: block;
+
+    &--copyright {
+      color: $color-text-highlight;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      color: $color-secondary;
+    }
+  }
+}
+
+.school-info {
+  &__name {
+    transition: all 0.3s ease-in-out;
+  }
+
+  &__logo {
+    display: block;
+    width: 30px;
+  }
+}
+
+@media (width <= 450px) {
+  .footer {
+    &__container {
+      flex-direction: column;
+    }
+  }
+}
